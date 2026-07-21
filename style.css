@@ -95,7 +95,7 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
 .sidebar{ position:relative; }
 .sidebar-inner{
   position:sticky; top:clamp(1.25rem,3vw,3rem);
-  display:flex; flex-direction:column; gap:1.15rem;
+  display:flex; flex-direction:column; gap:.9rem;
   max-height:calc(100vh - 2 * clamp(1.25rem,3vw,3rem));
   overflow-y:auto; overscroll-behavior:contain;
   padding-right:6px; scrollbar-width:thin;
@@ -109,7 +109,7 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
   background:var(--panel);
   border:1px solid var(--line);
   border-radius:var(--radius);
-  padding:1.6rem 1.5rem;
+  padding:1.3rem 1.35rem;
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
   box-shadow:var(--shadow);
@@ -120,9 +120,9 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
     linear-gradient(180deg, rgba(34,211,238,.075), transparent 42%),
     var(--panel);
 }
-.avatar-wrap{ position:relative; width:132px; margin:.25rem auto 1.1rem; }
+.avatar-wrap{ position:relative; width:104px; margin:.2rem auto .9rem; }
 .avatar{
-  width:132px; height:132px; border-radius:50%; object-fit:cover;
+  width:104px; height:104px; border-radius:50%; object-fit:cover;
   border:2px solid rgba(34,211,238,.35);
   box-shadow:0 0 0 6px rgba(34,211,238,.06), 0 16px 36px -14px rgba(0,0,0,.9);
 }
@@ -139,7 +139,7 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
 @keyframes spin{ to{ transform:rotate(360deg); } }
 
 .name{
-  font-size:1.62rem; font-weight:700; letter-spacing:-.03em;
+  font-size:1.45rem; font-weight:700; letter-spacing:-.03em;
   display:flex; flex-direction:column; line-height:1.1;
 }
 .name span{
@@ -151,10 +151,10 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
   letter-spacing:.16em; text-transform:uppercase; color:var(--cyan);
 }
 .tagline{
-  margin-top:.5rem; font-size:.82rem; color:var(--text-mute); line-height:1.6;
+  margin-top:.45rem; font-size:.79rem; color:var(--text-mute); line-height:1.55;
 }
 .status{
-  margin:1rem auto 0; display:inline-flex; align-items:center; gap:.5rem;
+  margin:.8rem auto 0; display:inline-flex; align-items:center; gap:.5rem;
   font-size:.75rem; color:#a7f3d0;
   background:rgba(52,211,153,.09); border:1px solid rgba(52,211,153,.24);
   padding:.32rem .7rem; border-radius:99px;
@@ -169,8 +169,8 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
 }
 
 .meta{
-  margin-top:1.25rem; padding-top:1.15rem; border-top:1px solid var(--line-soft);
-  display:flex; flex-direction:column; gap:.6rem; text-align:left;
+  margin-top:.95rem; padding-top:.9rem; border-top:1px solid var(--line-soft);
+  display:flex; flex-direction:column; gap:.48rem; text-align:left;
 }
 .meta li{
   display:flex; align-items:center; gap:.65rem;
@@ -180,7 +180,7 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
 .meta a{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; transition:color .18s; }
 .meta a:hover{ color:var(--cyan); }
 
-.cta{ margin-top:1.3rem; display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; }
+.cta{ margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; }
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:.45rem;
   padding:.62rem 1.05rem; border-radius:10px;
@@ -200,21 +200,21 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
 .panel-title{
   display:flex; align-items:center; gap:.6rem;
   font-size:.78rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
-  color:var(--text-dim); margin-bottom:1rem;
+  color:var(--text-dim); margin-bottom:.85rem;
 }
 .summary{ font-size:.87rem; color:var(--text-dim); line-height:1.75; }
 .summary + .summary{ margin-top:.7rem; }
 .interests{ margin-top:1rem; padding-top:.9rem; border-top:1px solid var(--line-soft); }
 .summary strong{ color:var(--text); font-weight:600; }
 
-.skill-group + .skill-group{ margin-top:1.05rem; }
+.skill-group + .skill-group{ margin-top:.8rem; }
 .skill-group h3{
   font-size:.7rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--text-mute); margin-bottom:.5rem;
+  color:var(--text-mute); margin-bottom:.42rem;
 }
-.tags{ display:flex; flex-wrap:wrap; gap:.4rem; }
+.tags{ display:flex; flex-wrap:wrap; gap:.34rem; }
 .tags li{
-  font-size:.735rem; padding:.28rem .6rem; border-radius:7px;
+  font-size:.72rem; padding:.24rem .55rem; border-radius:7px;
   background:rgba(255,255,255,.04); border:1px solid var(--line);
   color:var(--text-dim); transition:all .18s;
 }
