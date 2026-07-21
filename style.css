@@ -203,6 +203,8 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
   color:var(--text-dim); margin-bottom:1rem;
 }
 .summary{ font-size:.87rem; color:var(--text-dim); line-height:1.75; }
+.summary + .summary{ margin-top:.7rem; }
+.interests{ margin-top:1rem; padding-top:.9rem; border-top:1px solid var(--line-soft); }
 .summary strong{ color:var(--text); font-weight:600; }
 
 .skill-group + .skill-group{ margin-top:1.05rem; }
@@ -322,63 +324,6 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
   color:color-mix(in srgb, var(--accent) 78%, white);
 }
 
-/* ---------- timeline ---------- */
-.timeline{ position:relative; display:flex; flex-direction:column; gap:1.6rem; padding-left:1.6rem; }
-.timeline::before{
-  content:""; position:absolute; left:5px; top:.6rem; bottom:.6rem; width:1px;
-  background:linear-gradient(180deg, var(--cyan), rgba(148,178,220,.18) 30%, transparent);
-}
-.tl-item{ position:relative; }
-.tl-dot{
-  position:absolute; left:-1.6rem; top:.5rem;
-  width:11px; height:11px; border-radius:50%;
-  background:var(--bg); border:2px solid rgba(148,178,220,.4);
-  transition:border-color .25s, box-shadow .25s;
-}
-.tl-item:first-child .tl-dot{
-  border-color:var(--cyan); background:var(--cyan);
-  box-shadow:0 0 0 4px rgba(34,211,238,.16);
-}
-.tl-item:hover .tl-dot{ border-color:var(--cyan); box-shadow:0 0 0 4px rgba(34,211,238,.12); }
-.tl-body{
-  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
-  padding:1.3rem 1.35rem; transition:border-color .25s, background .25s, transform .25s;
-}
-.tl-item:hover .tl-body{
-  border-color:rgba(34,211,238,.28); background:var(--panel-strong); transform:translateX(3px);
-}
-.tl-head{ display:flex; justify-content:space-between; align-items:baseline; gap:1rem; flex-wrap:wrap; }
-.tl-head h3{ font-size:1.02rem; }
-.tl-date{
-  font-family:var(--mono); font-size:.72rem; color:var(--text-mute); white-space:nowrap; flex:none;
-}
-.tl-date.current{
-  color:var(--green); background:rgba(52,211,153,.1);
-  border:1px solid rgba(52,211,153,.22); padding:.15rem .5rem; border-radius:99px;
-}
-.tl-org{ margin:.35rem 0 .85rem; font-size:.8rem; color:var(--cyan); opacity:.85; }
-.tl-body .bullets li::before{ background:var(--cyan); }
-
-/* ---------- education ---------- */
-.split{ display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:1.1rem; align-items:start; }
-.mini-cards{ display:flex; flex-direction:column; gap:1.1rem; }
-.mini, .awards{
-  background:var(--panel); border:1px solid var(--line);
-  border-radius:var(--radius); padding:1.25rem 1.35rem;
-  transition:border-color .25s, transform .25s;
-}
-.mini:hover, .awards:hover{ border-color:rgba(34,211,238,.28); transform:translateY(-2px); }
-.mini-date{ font-family:var(--mono); font-size:.72rem; color:var(--cyan); }
-.mini h3{ font-size:1rem; margin:.45rem 0 .3rem; }
-.mini p{ font-size:.83rem; color:var(--text-mute); }
-.awards-title{
-  font-size:.72rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--text-mute); margin-bottom:.9rem;
-}
-.awards ul{ display:flex; flex-direction:column; gap:.65rem; }
-.awards li{ display:flex; gap:.6rem; font-size:.855rem; color:var(--text-dim); }
-.star{ color:var(--cyan); flex:none; }
-
 /* ---------- contact ---------- */
 .contact-block{
   text-align:center;
@@ -405,9 +350,8 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
   body{ font-size:15px; }
   .layout{ padding:1rem; gap:1.5rem; }
   .profile, .panel{ padding:1.35rem 1.15rem; }
-  .card, .tl-body{ padding:1.15rem; }
+  .card{ padding:1.15rem; }
   .cards{ grid-template-columns:1fr; }
-  .tl-head{ flex-direction:column; align-items:flex-start; gap:.3rem; }
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -421,7 +365,7 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
   #bg-canvas,.grid-overlay,.cta,.skip-link{ display:none !important; }
   body{ background:#fff; color:#111; }
   .layout{ display:block; }
-  .profile,.panel,.card,.tl-body,.mini,.awards{
+  .profile,.panel,.card{
     background:#fff; border:1px solid #ccc; box-shadow:none; break-inside:avoid;
   }
   .reveal{ opacity:1; transform:none; }

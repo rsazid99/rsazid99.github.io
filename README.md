@@ -3,7 +3,7 @@
 One-page personal portfolio for a Robotics Software Engineer.
 Static HTML/CSS/JS — no build step, no dependencies.
 
-**Layout:** sticky left column (photo, contact, skills) · right column (projects, experience, education).
+**Layout:** sticky left column (photo, contact, about, skills) · right column (projects, contact CTA).
 
 ## Files
 
@@ -13,7 +13,6 @@ Static HTML/CSS/JS — no build step, no dependencies.
 | `style.css` | Styling, responsive + print rules |
 | `script.js` | Scroll reveal, card spotlight, point-cloud background |
 | `assets/profile.jpg` | Cropped profile photo (900×900) |
-| `assets/Sazid_Rahman_Simanto_CV.pdf` | Downloadable CV |
 
 ## Run locally
 
