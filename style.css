@@ -94,15 +94,8 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
 }
 .sidebar{ position:relative; }
 .sidebar-inner{
-  position:sticky; top:clamp(1.25rem,3vw,3rem);
   display:flex; flex-direction:column; gap:.9rem;
-  max-height:calc(100vh - 2 * clamp(1.25rem,3vw,3rem));
-  overflow-y:auto; overscroll-behavior:contain;
-  padding-right:6px; scrollbar-width:thin;
-  scrollbar-color:rgba(148,178,220,.22) transparent;
 }
-.sidebar-inner::-webkit-scrollbar{ width:6px; }
-.sidebar-inner::-webkit-scrollbar-thumb{ background:rgba(148,178,220,.2); border-radius:99px; }
 
 /* ---------- profile card ---------- */
 .profile, .panel{
@@ -243,6 +236,21 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
 }
 .block-sub{ margin-top:.5rem; color:var(--text-mute); font-size:.9rem; }
 
+/* ---------- about ---------- */
+.about-block{
+  background:
+    linear-gradient(120deg, rgba(34,211,238,.07), transparent 55%),
+    var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:clamp(1.4rem, 2.5vw, 1.9rem);
+  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+}
+.about-block h2{ margin-bottom:.9rem; }
+.about-text{ color:var(--text-dim); font-size:.95rem; line-height:1.8; max-width:70ch; }
+.about-text + .about-text{ margin-top:.8rem; }
+.about-text strong{ color:var(--text); font-weight:600; }
+
 /* ---------- project cards ---------- */
 .cards{ display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:1.1rem; }
 .card{
@@ -343,7 +351,6 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
 /* ---------- responsive ---------- */
 @media (max-width: 1024px){
   .layout{ grid-template-columns:1fr; }
-  .sidebar-inner{ position:static; max-height:none; overflow:visible; }
   .content{ gap:3rem; }
 }
 @media (max-width: 560px){
