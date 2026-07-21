@@ -202,7 +202,6 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
   font-size:.78rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
   color:var(--text-dim); margin-bottom:1rem;
 }
-.idx{ font-family:var(--mono); font-size:.72rem; color:var(--cyan); opacity:.8; letter-spacing:.05em; }
 .summary{ font-size:.87rem; color:var(--text-dim); line-height:1.75; }
 .summary strong{ color:var(--text); font-weight:600; }
 
@@ -240,7 +239,6 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
   display:flex; align-items:baseline; gap:.75rem;
   font-size:clamp(1.5rem,2.5vw,1.95rem); font-weight:700;
 }
-.block-head h2 .idx{ font-size:.8rem; }
 .block-sub{ margin-top:.5rem; color:var(--text-mute); font-size:.9rem; }
 
 /* ---------- project cards ---------- */
@@ -286,11 +284,23 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7;
   color:var(--accent); opacity:.95;
 }
 .card-link{
-  display:inline-flex; align-items:center; gap:.3rem; flex:none;
-  font-size:.73rem; color:var(--text-mute); transition:color .18s;
+  display:inline-flex; align-items:center; gap:.35rem; flex:none;
+  font-size:.73rem; font-weight:600; letter-spacing:.01em;
+  padding:.3rem .65rem; border-radius:99px;
+  color:color-mix(in srgb, var(--accent) 85%, white);
+  background:color-mix(in srgb, var(--accent) 12%, transparent);
+  border:1px solid color-mix(in srgb, var(--accent) 34%, transparent);
+  transition:background .2s, border-color .2s, color .2s, transform .2s, box-shadow .2s;
 }
-.card-link svg{ width:.82rem; height:.82rem; }
-.card-link:hover{ color:var(--accent); }
+.card-link svg{ width:.8rem; height:.8rem; transition:transform .2s; }
+.card-link:hover{
+  color:#04121a;
+  background:var(--accent);
+  border-color:var(--accent);
+  transform:translateY(-1px);
+  box-shadow:0 8px 18px -8px color-mix(in srgb, var(--accent) 90%, transparent);
+}
+.card-link:hover svg{ transform:translate(1px,-1px); }
 .card h3{ font-size:1.05rem; margin-bottom:.75rem; }
 .card:hover h3{ color:#fff; }
 
